@@ -16,10 +16,10 @@ const auth = firebaseApp.auth();
 
 // Henter info frå input-feltet name, og oppretter bruker i collection "users" 
 function createUser() {
-    const name = document.getElementById("name").value; 
+    const email = document.getElementById("email").value; 
     const password = document.getElementById("password").value;
-    firebase.firestore().collection("Users").doc().set({
-            name: name,
+    firebase.firestore().collection("users").doc().set({
+            email: email,
             password: password
         })
         .then(function () {
@@ -33,3 +33,18 @@ function createUser() {
     
 }
 
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in 
+    var user = userCredential.user;
+    // ...
+  })
+
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
