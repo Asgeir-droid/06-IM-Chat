@@ -17,8 +17,10 @@ const auth = firebaseApp.auth();
 // Henter info frå input-feltet name, og oppretter bruker i collection "users" 
 function createUser() {
     const name = document.getElementById("name").value; 
-    firebase.firestore().collection("users").doc().set({
-            name: name
+    const password = document.getElementById("password").value;
+    firebase.firestore().collection("Users").doc().set({
+            name: name,
+            password: password
         })
         .then(function () {
            console.log("bruker opprettet");
