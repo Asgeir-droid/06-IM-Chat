@@ -4,18 +4,21 @@
         <meta charset="utf-8" />
         <title>Logg inn/Sign up</title>
         <link rel="stylesheet" href="Resources/css/main.css"/>
+        <link rel="stylesheet" href="Resources/css/background.css"/>
     </head>
     <body>
-        <div>
-            <label>E-post</label><br>
-            <input id="email" type="email">
-        </div>
-        <div>
-            <label>Passord</label><br>
-            <input id="password" type="password">
-        </div>
-        <div class="signUpBox">
-            <button id="btnCreate" onclick="createUser()">Meld deg på</button>
+        <div class="setup">
+            <div>
+                <label>E-post</label><br>
+                <input id="email" type="email">
+            </div>
+            <div>
+                <label>Passord</label><br>
+                <input id="password" type="password">
+            </div><br>
+            <div class="signUpBox">
+                <button id="btnCreate" onclick="createUser()">Meld deg på</button>
+            </div>
         </div>
 
         <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
@@ -23,7 +26,6 @@
         <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth-compat.js"></script>
         <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore-compat.js"></script>
-
         <script src="Resources/js/login.js"></script>
     </body>
 </html>

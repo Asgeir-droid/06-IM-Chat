@@ -33,5 +33,4 @@ function createUser() {
         console.log(e.code); 
         console.log(e.message);
     });
-    
 }
