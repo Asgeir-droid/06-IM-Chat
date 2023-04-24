@@ -18,9 +18,11 @@ const auth = firebaseApp.auth();
 function createUser() {
     const email = document.getElementById("email").value; 
     const password = document.getElementById("password").value;
+    //const name = document.getElementById("name").value;
+    firebase.auth().createUserWithEmailAndPassword(email, password)
     firebase.firestore().collection("users").doc().set({
             email: email,
-            password: password
+            //name: name
         })
 
         .then(function () {
